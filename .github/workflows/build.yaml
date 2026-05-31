@@ -26,7 +26,8 @@ jobs:
 
       - name: Convert to bin
         run: |
-          $HOME/.platformio/packages/toolchain-atmelavr/bin/avr-objcopy -O binary ".pio/build/ATmega48P/firmware.elf" firmware_ATmega48P.bin
+          $HOME/.platformio/packages/toolchain-atmelavr/bin/avr-objcopy -O binary ".pio/build/1MB_ATmega48PA/firmware.elf" firmware_1MB_ATmega48PA.bin
+          $HOME/.platformio/packages/toolchain-atmelavr/bin/avr-objcopy -O binary ".pio/build/1MB_ATmega48PV/firmware.elf" firmware_1MB_ATmega48V.bin
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
